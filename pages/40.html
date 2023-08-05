@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name ="keywords" content ="HTML 5, CSS 3, JavaScript, jquery, Angularjs"/>
+<meta name ="description" content ="Dynamic web development">
+<meta name = "author" content ="lawrence">
+<meta name = "viewport" content ="width=device-width,initial-scale=1.0">
+<title>grid view layout</title>
+<link rel ="stylesheet" href ="font-awesome/css/font-awesome.min.css">
+<link rel ="stylesheet" type ="text/css" href ="../css/main.css">
+
+    
+</head>
+
+<style>
+
+@import url(
+'https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+ 
+        /* First make all margin and padding 0 */
+        * {
+            margin: 0px;
+            padding: 0px;
+            background-color:aqua;
+        }
+ 
+        /* Second work on image*/
+        header img {
+            display: block;
+            height: 84px;
+            cursor: pointer;
+            margin-right: auto;
+        }
+ 
+        /* Changes the styling of links if necessary */
+        li,
+        a,
+        button {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+ 
+        /* Now start positioning the links and images
+           according to your convinence */
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 30px 10%;
+        }
+ 
+        .navigate_links {
+            list-style: none;
+        }
+ 
+        .navigate_links li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+ 
+        .navigate_links li a {
+            transition: all 0.3s ease-in-out 0s;
+        }
+ 
+        /* Add some transition to make navigation
+           bar attractive */
+        .navigate_links li a:hover {
+            color: greenyellow;
+            border: 2px solid blue;
+            box-shadow: 3px 3px 3px red, 3px 3px 3px blue;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 12px;
+        }
+ 
+        button {
+            margin-left: 70px;
+            padding: 9px 12px;
+            border-radius: 15px;
+            background-color: rgb(89, 61, 248);
+            color: rgb(243, 236, 236);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out 0s;
+        }
+ 
+        button:hover {
+            background-color: rgb(219, 221, 81);
+            color: black;
+        }
+
+        form{
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+	body {
+		text-align: center;
+	}
+
+	h1 {
+		color: green;
+	}
+
+
+	.radio {
+		font-size: 30px;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		color: black;
+	}
+
+
+	.circle {
+		position: relative;
+		height: 25px;
+		width: 25px;
+		border: 5px solid #3CE75B;
+		display: inline-block;
+		right: 125px;
+		border-radius: 50%;
+	}
+
+	.circle:after {
+		content: '';
+		height: 10px;
+		width: 10px;
+		display: block;
+		position: absolute;
+		background: #3CE75B;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		opacity: 0;
+	}
+
+	.radio input:checked~.circle:after {
+		opacity: 1;
+	}
+</style>
+
+
+<body>
+<header>
+    <img class="logo"
+            src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20210401193733/geeksforgeeks.png"
+            alt="Loading image">
+
+    <nav>
+        <ul class="navigate_links">
+            <li><a href ="login.html">HOME</a></li>
+            <li><a href ="login.html">LOGOUT</a></li>
+            <li><a href ="90.html">Reporting Form for Chlamydia and Gonorrhea</a></li>
+            
+          </ul>   
+</nav>
+<a class="signin" href="#">
+            <button>Get it for free</button>
+        </a>
+</header>
+    <article>
+<h1>REGISTRATION FORM</h1>
+<form>
+   <div>
+<label for ="firstname">Firstname:</label><br/>
+    <input id ="firstname" name ="firstname" type ="text" required/><br/>
+    <label for ="othername">othername:</label><br/>
+    <input id ="othername" name ="othername" type ="text" required/><br/>
+    <label for ="lastname">lastname:</label><br/>
+    <input id ="lastname" name ="lastname" type ="text" required/><br/>
+    <label for="uniqueid">Unique ID</label><br/>
+    <input type ="password" id ="uniqueid" name ="uniqueid" required/><br/>
+    <label for="dob">Date Of Birth</label>
+    <input type ="date" id ="dob" name ="dob"><br/>
+    <label><p>Sex</p></label>
+    <input type ="radio" name ="sex" value ="female" id ="Female">
+    <label for ="Female">Female</label><br/>
+    <input type ="radio" name ="sex" value ="Male" id ="Male">
+    <label for ="Male">Male</label><br/>
+    <input type ="radio" name ="sex" value ="intersex" id ="intersex">
+   <label for ="intersex">intersex</label><br/>
+    <label>Gender Identity</label><br/>
+    <input type ="radio" name ="gender identity" value ="cisgender" id ="cisgender">
+    <label for ="cisgender">Cisgender</label><br/>
+    <input type ="radio" name ="gender identity" value ="Gender Expression" id ="Gender Expression">
+    <label for ="Gender Expression">Gender Expression</label><br/>
+    <input type ="radio" name ="gender identity" value ="Gender Fluid" id ="Gender fluid">
+    <label for ="Gender fluid">Gender Fluid</label><br/>
+    <input type ="radio" name ="gender identity" value ="Genderqueer" id ="Genderqueer">
+    <label for ="Genderqueer">Genderqueer</label><br/>
+    <input type ="radio" name ="gender identity" value ="Gender Variant" id ="Gender Variant">
+    <label for ="Gender variant">Gender Variant</label><br/>
+    <input type ="radio" name ="gender identity" value ="Mx" id ="Mx">
+    <label for ="Mx">Mx</label><br/>
+    <label>Pronouns (optional)</label><br/>
+    <input type ="radio" name ="pronouns (optional)" value ="She/Her/hers" id ="She/Her/hers">
+    <label for ="She/Her/Hers">She/Her/hers</label><br/>
+    <input type ="radio" name ="pronouns (optional)" value ="HE/Him/His" id ="HE/Him/His">
+    <label for ="HE/Him/His">HE/Him/His</label><br/>
+    <input type ="radio" name ="pronounns (optional)" value ="They/Them/Theirs" id ="They/Them/Theirs">
+    <label for ="They/Them/Theirs">They/Them/Theirs</label><br/>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+     </div>
+    
+
+    
+    
+    
+</form>
+    </article>       
+      </aside>
+
+    </aside>
+    <details>
+<summary></summary>
+    
+    </details>
+</section>
+<footer>
+</footer>
+</body>
+</html>
+
+
